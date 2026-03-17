@@ -1,0 +1,25 @@
+[agent]
+model = "claude-opus-4-6"
+max_tokens = 8192
+# Severity threshold for posting a review: "error" | "warning" | "info" | "suggestion"
+min_post_severity = "warning"
+
+[github]
+# Overridden by GITHUB_TOKEN env var at runtime
+# token = ""
+
+[linting]
+python = true
+javascript = true
+# Extra flake8 args, e.g. ["--max-line-length=120"]
+flake8_args = []
+
+[security]
+run_bandit = true
+run_pattern_scan = true
+# Bandit severity threshold: LOW | MEDIUM | HIGH
+bandit_severity = "LOW"
+
+[ast]
+max_function_lines = 60
+require_docstrings = true
